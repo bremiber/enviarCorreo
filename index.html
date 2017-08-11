@@ -1,0 +1,39 @@
+<!DOCTYPE html public "-//W3c//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html14/loose.dtd">
+<html>
+<head>
+	<title>Envio de Correo via Google Script</title>
+	<meta charset="utf-8">
+	<meta name="Correo" content="envio, correo, google, script">
+</head>
+<body>
+	<form name="Correo" method="POST" action="https://script.google.com/macros/s/AKfycbzBbIodwK-5VadCv8ZXUj6fW5xhQZmt1QFGlp5BH08Q8_24LLo/exec">
+		<fieldset class="pure-group">
+      		<label for="name">Name: </label>
+      		<input id="name" name="name" placeholder="Nombres" />
+    	</fieldset>
+
+    	<fieldset class="pure-group">
+      		<label for="message">Message: </label>
+      		<textarea id="message" name="message" rows="10" placeholder="¿Cuál es su mensaje?"></textarea>
+    	</fieldset>
+
+    	<fieldset class="pure-group">
+      		<label for="email"><em>Your</em> Email Address:</label>
+      		<input id="email" name="email" type="email" value="" required placeholder="your.name@email.com"/>
+      		<span id="email-invalid" style="display:none">Ingrese un correo válido</span>
+    	</fieldset>
+
+    	<button class="button-success pure-button button-xlarge"><i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
+	</form>
+
+	<!-- Customise the Thankyou Message People See when they submit the form: -->
+  	<div style="display:none;" id="thankyou_message">
+    	<h2><em>Thanks</em> for contacting us!
+     	 We will get back to you soon!</h2>
+ 	</div>
+
+		<script data-cfasync="false" type="text/javascript"
+		src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+</body>
+</html>
